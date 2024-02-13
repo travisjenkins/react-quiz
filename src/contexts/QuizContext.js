@@ -85,7 +85,7 @@ function QuizProvider({ children }) {
   const maxPossiblePoints = questions.reduce((pre, cur) => pre + cur.points, 0);
 
   useEffect(function () {
-    fetch("http://localhost:8000/questions")
+    fetch("https://tjinks123-react-quiz.netlify.app/questions")
       .then((res) => res.json())
       .then((data) => dispatch({ type: "dataReceived", payload: data }))
       .catch((err) => dispatch({ type: "dataFailed" }));
